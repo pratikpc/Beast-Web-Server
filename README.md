@@ -3,10 +3,10 @@
 ### Why Coroutines?
 
 Callback hell is bad and gives me headaches.    
-Okay callbacks are not bad but its easier to write bad code which looks like 
+Okay callbacks are not bad but its easier to write bad code which
 1. Involves tons of magic and weird recursion
 2. Needs one to write 10 lines about what the code does
-3. Needs one to update those 10 lines once the code changes (yeah right?)
+3. Needs one to update those 10 lines once the code changes (yeah right? Who does that? Hello?)
 
 Coroutine codes look a lot more linear instead, sometimes end up being shorter and more easier to understand.
 
@@ -43,8 +43,10 @@ vs
   }
 ```
 
-####What does the above code do @pratikpc?    
-It's a glorified echo server. A bit less obvious from the second sample I presume.
+#### What does the above code do @pratikpc?    
+It's a glorified echo server.        
+A bit less obvious from the second sample I presume.   
+In an echo server, an individual sends a message say _Hello_ to the server and the server responds with _Hello_.
 
 ### Simplified usage
 
@@ -62,7 +64,7 @@ It's a glorified echo server. A bit less obvious from the second sample I presum
           io_context, api({boost::asio::ip::tcp::v4(), PORT}), boost::asio::detached);
 ```
 
-For a full sample, check https://github.com/pratikpc/Beast-Web-Sample/blob/main/src/main.cxx
+For a full sample, check [here](src/main.cxx)
 
 ### Why?
 
@@ -73,7 +75,8 @@ It's a simple proof of concept and it was fun to write
 Refer to docs on Coroutines.
 1. [Refer to Boost ASIO Docs](https://www.boost.org/doc/libs/develop/doc/html/boost_asio/example/cpp17/coroutines_ts/refactored_echo_server.cpp)
 2. [Refer to Boost Beast Boost Coroutine docs](https://www.boost.org/doc/libs/develop/libs/beast/example/http/client/coro/http_client_coro.cpp)
-3. A bit of Boost Beast code might look a bit anti-pattern when it comes to C++ Coroutines because a bit of it is so remember to focus on Boost.ASIO code well.
+3. A bit of Boost Beast code might look a bit anti-pattern when it comes to C++ Coroutines so remember to focus on Boost.ASIO code well.
+4. @MattPD [maintains a gist of coro related articles] (https://gist.github.com/MattPD/9b55db49537a90545a90447392ad3aeb#file-cpp-std-coroutines-draft-md)
 
 ### Dependencies
 
@@ -90,4 +93,4 @@ libs::Beast-Web
 )
 ```
 
-For a full sample check https://github.com/pratikpc/Beast-Web-Sample/blob/main/src/CMakeLists.txt
+For a full sample check [here](src/CMakeLists.txt)
